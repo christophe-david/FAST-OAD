@@ -1,3 +1,0 @@
-x, aircraft/x
-y, aircraft/y
-z, aircraft/z

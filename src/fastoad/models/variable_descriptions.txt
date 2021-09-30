@@ -173,71 +173,6 @@ data:load_case:lc1:altitude || altitude for sizing load case 1 (gust with minimu
 data:load_case:lc2:U_gust || gust vertical speed for sizing load case 2 (gust with maximum aircraft mass)
 data:load_case:lc2:Vc_EAS || equivalent air speed for sizing load case 2 (gust with maximum aircraft mass)
 data:load_case:lc2:altitude || altitude for sizing load case 2 (gust with maximum aircraft mass)
-data:mission:sizing:ZFW || aircraft mass with payload, without fuel, in sizing mission
-data:mission:sizing:block_fuel || total fuel mass at start
-data:mission:sizing:block_time || total duration of mission
-data:mission:sizing:climb:thrust_rate || thrust rate (between 0.0 and 1.0) during climb phase in sizing mission
-data:mission:sizing:cs25:sizing_load_1 || sizing load during gust with minimum aircraft mass
-data:mission:sizing:cs25:sizing_load_2 || sizing load during gust with maximum aircraft mass
-data:mission:sizing:descent:thrust_rate || thrust rate (between 0.0 and 1.0) during descent phase in sizing mission
-data:mission:sizing:diversion:climb:duration || duration of diversion climb phase in sizing mission
-data:mission:sizing:diversion:climb:fuel || mass of consumed fuel during diversion climb phase in sizing mission
-data:mission:sizing:diversion:cruise:distance || travelled distance during diversion cruise phase in sizing mission
-data:mission:sizing:diversion:cruise:duration || duration of diversion cruise phase in sizing mission
-data:mission:sizing:diversion:cruise:fuel || mass of consumed fuel during diversion cruise phase in sizing mission
-data:mission:sizing:diversion:descent:duration || duration of diversion descent phase in sizing mission
-data:mission:sizing:diversion:descent:fuel || mass of consumed fuel during diversion descent phase in sizing mission
-data:mission:sizing:diversion:distance || distance to travel during diversion in sizing mission
-data:mission:sizing:flight:duration || total flight time in sizing mission
-data:mission:sizing:flight:fuel || mass of consumed fuel during flight in sizing mission
-data:mission:sizing:fuel || consumed fuel mass during whole mission
-data:mission:sizing:fuel:unitary || consumption/passenger/distance_unit in sizing mission
-data:mission:sizing:fuel_reserve || mass of fuel reserve
-data:mission:sizing:holding:CAS || Calibrated Air Speed during holding phase in sizing mission
-data:mission:sizing:holding:altitude || altitude during holding phase in sizing mission
-data:mission:sizing:holding:duration || duration of holding phase in sizing mission
-data:mission:sizing:holding:fuel || mass of consumed fuel during holding phase in sizing mission
-data:mission:sizing:initial_climb:fuel || mass of consumed fuel during initial climb phase in sizing mission
-data:mission:sizing:landing:duration || duration of landing phase in sizing mission
-data:mission:sizing:landing:flap_angle || flap angle during landing phase in sizing mission
-data:mission:sizing:landing:friction_coefficient_brake || ground friction coefficient with full brakes in sizing mission
-data:mission:sizing:landing:fuel || mass of consumed fuel during landing phase in sizing mission
-data:mission:sizing:landing:length || runway length required for landing in sizing mission
-data:mission:sizing:landing:slat_angle || slat angle during landing phase in sizing mission
-data:mission:sizing:landing:thrust_rate || thrust rate (between 0.0 and 1.0) during landing phase in sizing mission
-data:mission:sizing:main_route:climb:distance || covered ground distance during climb phase
-data:mission:sizing:main_route:climb:duration || duration of climb phase in sizing mission
-data:mission:sizing:main_route:climb:fuel || mass of consumed fuel during climb phase in sizing mission
-data:mission:sizing:main_route:climb:max_climb_rate || maximum climb rate in sizing mission
-data:mission:sizing:main_route:cruise:altitude || altitude during cruise phase in sizing mission
-data:mission:sizing:main_route:cruise:distance || covered ground distance during cruise phase
-data:mission:sizing:main_route:cruise:duration || duration of cruise phase in sizing mission
-data:mission:sizing:main_route:cruise:fuel || mass of consumed fuel during cruise phase in sizing mission
-data:mission:sizing:main_route:cruise:mass_ratio || ratio (aircraft mass at end of cruise)/(aircraft mass at start of cruise)
-data:mission:sizing:main_route:descent:distance || covered ground distance during descent phase
-data:mission:sizing:main_route:descent:duration || duration of descent phase in sizing mission
-data:mission:sizing:main_route:descent:fuel || mass of consumed fuel during descent phase in sizing mission
-data:mission:sizing:main_route:fuel || mass of total fuel consumed during flight in sizing mission
-data:mission:sizing:takeoff:TOFL || TakeOff Field Length in sizing mission
-data:mission:sizing:takeoff:V2 || safety speed before reaching 35 feet height in sizing mission
-data:mission:sizing:takeoff:VLOF || lift-off speed in sizing mission
-data:mission:sizing:takeoff:VMCA || air minimum control speed in sizing mission
-data:mission:sizing:takeoff:VR || rotation speed in sizing mission
-data:mission:sizing:takeoff:altitude || altitude at takeoff in sizing mission
-data:mission:sizing:takeoff:delta_ISA || ISA temperature increment during takeoff phase in sizing mission
-data:mission:sizing:takeoff:duration || duration of takeoff phase in sizing mission
-data:mission:sizing:takeoff:flap_angle || flap angle during takeoff phase in sizing mission
-data:mission:sizing:takeoff:friction_coefficient_no_brake || ground friction coefficient with no brake in sizing mission
-data:mission:sizing:takeoff:fuel || mass of consumed fuel during takeoff phase in sizing mission
-data:mission:sizing:takeoff:slat_angle || slat angle during takeoff phase in sizing mission
-data:mission:sizing:taxi_in:duration || duration of taxi-in phase in sizing mission
-data:mission:sizing:taxi_in:fuel || mass of consumed fuel during taxi-in phase in sizing mission
-data:mission:sizing:taxi_in:speed || speed during taxi-in phase in sizing mission
-data:mission:sizing:taxi_in:thrust_rate || thrust rate (between 0.0 and 1.0) during taxi-in phase in sizing mission
-data:mission:sizing:taxi_out:duration || duration of taxi-out phase in sizing mission
-data:mission:sizing:taxi_out:fuel || mass of consumed fuel during taxi-out phase in sizing mission
-data:mission:sizing:taxi_out:speed || speed during taxi-out phase in sizing mission
-data:mission:sizing:taxi_out:thrust_rate || thrust rate (between 0.0 and 1.0) during taxi-out phase in sizing mission
 data:propulsion:MTO_thrust || maximum thrust of one engine at sea level
 data:propulsion:SFC || Specific Fuel Consumption (can be a vector)
 data:propulsion:altitude || altitude for propulsion calculation (can be a vector)
@@ -353,10 +288,6 @@ data:weight:systems:power:hydraulic_systems:CG:x || power (C1): X-position of ce
 data:weight:systems:power:hydraulic_systems:mass || power (C1): mass
 data:weight:systems:transmission:CG:x || transmission (C4): X-position of center of gravity
 data:weight:systems:transmission:mass || transmission (C4): mass
-settings:mission:sizing:breguet:climb:mass_ratio || For Breguet performance computation: assumption of (mass at end of climb) / (mass at start of climb)
-settings:mission:sizing:breguet:climb_descent_distance || For Breguet performance computation: assumption of ground distance covered during climb + descent
-settings:mission:sizing:breguet:descent:mass_ratio || For Breguet performance computation: assumption of (mass at end of descent) / (mass at start of descent)
-settings:mission:sizing:breguet:reserve:mass_ratio || For Breguet performance computation: (weight of fuel reserve)/ZFW
 settings:weight:aircraft:CG:range || distance between front position and aft position of CG, as ratio of mean aerodynamic chord (allows to have front position of CG, as currently, FAST-OAD estimates only the aft position of CG)
 settings:weight:airframe:flight_controls:mass:k_fc || flight controls (A4): 0.85e-4 if electrical, 1.35e-4 if conventional
 settings:weight:airframe:fuselage:mass:k_fus || correction coefficient: 1.00 if all engines under wing / 1.02 with 2 engines at rear / 1.03 if 3 engines at rear / 1.05 if 1 engine in vertical tail (with or without 2 engines under wing)

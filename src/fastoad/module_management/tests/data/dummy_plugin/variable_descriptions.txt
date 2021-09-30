@@ -1,1 +1,0 @@
-dummy:variable||Some dummy variable.
